@@ -3107,23 +3107,262 @@ public class Sudoku extends javax.swing.JFrame {
                                         row4 = false;
                                     }
                                     
-                                    if (mt[0][2]!=x & mt[1][2]!=x & mt[2][2]!=x & mt[3][2]!=x & mt[5][2]!=x & mt[6][2]!=x & mt[7][2]!=x & mt[8][2]!=x &
-                                            mt[4][0]!=x & mt[4][1]!=x & mt[4][3]!=x & mt[4][4]!=x & mt[4][5]!=x & mt[4][6]!=x & mt[4][7]!=x & mt[4][8]!=x &
-                                            mt[3][0]!=x & mt[3][1]!=x & mt[5][0]!=x & mt[5][1]!=x) {
+                                    if (mt[0][3]!=x & mt[1][3]!=x & mt[2][3]!=x & mt[3][3]!=x & mt[5][3]!=x & mt[6][3]!=x & mt[7][3]!=x & mt[8][3]!=x &
+                                            mt[4][0]!=x & mt[4][1]!=x & mt[4][2]!=x & mt[4][4]!=x & mt[4][5]!=x & mt[4][6]!=x & mt[4][7]!=x & mt[4][8]!=x &
+                                            mt[3][4]!=x & mt[3][5]!=x & mt[5][4]!=x & mt[5][5]!=x) {
                                         
-                                        if ((row1 & row2) & mat[3][2].compareTo("")!=0 & mat[5][2].compareTo("")!=0) {
-                                            mt[4][2] = x;
-                                            mat[4][2] = String.valueOf(x);
+                                        if ((row1 & row2) & mat[3][3].compareTo("")!=0 & mat[5][3].compareTo("")!=0) {
+                                            mt[4][3] = x;
+                                            mat[4][3] = String.valueOf(x);
                                         }
-                                        if ((row3 & row4) & mat[4][0].compareTo("")!=0 & mat[4][1].compareTo("")!=0) {
-                                            mt[4][2] = x;
-                                            mat[4][2] = String.valueOf(x);
+                                        if ((row3 & row4) & mat[4][4].compareTo("")!=0 & mat[4][5].compareTo("")!=0) {
+                                            mt[4][3] = x;
+                                            mat[4][3] = String.valueOf(x);
                                         }
                                     }
                                 }
                             }
                         }
                         
+                        if (c==4 & f==4) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][3]==x || mt[1][3]==x || mt[2][3]==x || mt[6][3]==x || mt[7][3]==x || mt[8][3]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][5]==x || mt[1][5]==x || mt[2][5]==x || mt[6][5]==x || mt[7][5]==x || mt[8][5]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][0]==x || mt[3][1]==x || mt[3][2]==x || mt[3][6]==x || mt[3][7]==x || mt[3][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[5][0]==x || mt[5][1]==x || mt[5][2]==x || mt[5][6]==x || mt[5][7]==x || mt[5][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][4]!=x & mt[1][4]!=x & mt[2][4]!=x & mt[3][4]!=x & mt[5][4]!=x & mt[6][4]!=x & mt[7][4]!=x & mt[8][4]!=x &
+                                            mt[4][0]!=x & mt[4][1]!=x & mt[4][2]!=x & mt[4][3]!=x & mt[4][5]!=x & mt[4][6]!=x & mt[4][7]!=x & mt[4][8]!=x &
+                                            mt[3][3]!=x & mt[3][5]!=x & mt[5][3]!=x & mt[5][5]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][4].compareTo("")!=0 & mat[5][4].compareTo("")!=0) {
+                                            mt[4][4] = x;
+                                            mat[4][4] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[4][3].compareTo("")!=0 & mat[4][5].compareTo("")!=0) {
+                                            mt[4][4] = x;
+                                            mat[4][4] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==4 & f==5) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][3]==x || mt[1][3]==x || mt[2][3]==x || mt[6][3]==x || mt[7][3]==x || mt[8][3]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][4]==x || mt[1][4]==x || mt[2][4]==x || mt[6][4]==x || mt[7][4]==x || mt[8][4]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][0]==x || mt[3][1]==x || mt[3][2]==x || mt[3][6]==x || mt[3][7]==x || mt[3][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[5][0]==x || mt[5][1]==x || mt[5][2]==x || mt[5][6]==x || mt[5][7]==x || mt[5][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][5]!=x & mt[1][5]!=x & mt[2][5]!=x & mt[3][5]!=x & mt[5][5]!=x & mt[6][5]!=x & mt[7][5]!=x & mt[8][5]!=x &
+                                            mt[4][0]!=x & mt[4][1]!=x & mt[4][2]!=x & mt[4][3]!=x & mt[4][4]!=x & mt[4][6]!=x & mt[4][7]!=x & mt[4][8]!=x &
+                                            mt[3][3]!=x & mt[3][4]!=x & mt[5][3]!=x & mt[5][4]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][5].compareTo("")!=0 & mat[5][5].compareTo("")!=0) {
+                                            mt[4][5] = x;
+                                            mat[4][5] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[4][3].compareTo("")!=0 & mat[4][4].compareTo("")!=0) {
+                                            mt[4][5] = x;
+                                            mat[4][5] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==4 & f==6) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][7]==x || mt[1][7]==x || mt[2][7]==x || mt[6][7]==x || mt[7][7]==x || mt[8][7]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][8]==x || mt[1][8]==x || mt[2][8]==x || mt[6][8]==x || mt[7][8]==x || mt[8][8]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][0]==x || mt[3][1]==x || mt[3][2]==x || mt[3][3]==x || mt[3][4]==x || mt[3][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[5][0]==x || mt[5][1]==x || mt[5][2]==x || mt[5][3]==x || mt[5][4]==x || mt[5][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][6]!=x & mt[1][6]!=x & mt[2][6]!=x & mt[3][6]!=x & mt[5][6]!=x & mt[6][6]!=x & mt[7][6]!=x & mt[8][6]!=x &
+                                            mt[4][0]!=x & mt[4][1]!=x & mt[4][2]!=x & mt[4][3]!=x & mt[4][4]!=x & mt[4][5]!=x & mt[4][7]!=x & mt[4][8]!=x &
+                                            mt[3][7]!=x & mt[3][8]!=x & mt[5][7]!=x & mt[5][8]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][6].compareTo("")!=0 & mat[5][6].compareTo("")!=0) {
+                                            mt[4][6] = x;
+                                            mat[4][6] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[4][7].compareTo("")!=0 & mat[4][8].compareTo("")!=0) {
+                                            mt[4][6] = x;
+                                            mat[4][6] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==4 & f==7) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][6]==x || mt[1][6]==x || mt[2][6]==x || mt[6][6]==x || mt[7][6]==x || mt[8][6]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][8]==x || mt[1][8]==x || mt[2][8]==x || mt[6][8]==x || mt[7][8]==x || mt[8][8]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][0]==x || mt[3][1]==x || mt[3][2]==x || mt[3][3]==x || mt[3][4]==x || mt[3][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[5][0]==x || mt[5][1]==x || mt[5][2]==x || mt[5][3]==x || mt[5][4]==x || mt[5][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][7]!=x & mt[1][7]!=x & mt[2][7]!=x & mt[3][7]!=x & mt[5][7]!=x & mt[6][7]!=x & mt[7][7]!=x & mt[8][7]!=x &
+                                            mt[4][0]!=x & mt[4][1]!=x & mt[4][2]!=x & mt[4][3]!=x & mt[4][4]!=x & mt[4][5]!=x & mt[4][6]!=x & mt[4][8]!=x &
+                                            mt[3][6]!=x & mt[3][8]!=x & mt[5][6]!=x & mt[5][8]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][7].compareTo("")!=0 & mat[5][7].compareTo("")!=0) {
+                                            mt[4][7] = x;
+                                            mat[4][7] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[4][6].compareTo("")!=0 & mat[4][8].compareTo("")!=0) {
+                                            mt[4][7] = x;
+                                            mat[4][7] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==4 & f==8) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][6]==x || mt[1][6]==x || mt[2][6]==x || mt[6][6]==x || mt[7][6]==x || mt[8][6]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][7]==x || mt[1][7]==x || mt[2][7]==x || mt[6][7]==x || mt[7][7]==x || mt[8][7]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][0]==x || mt[3][1]==x || mt[3][2]==x || mt[3][3]==x || mt[3][4]==x || mt[3][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[5][0]==x || mt[5][1]==x || mt[5][2]==x || mt[5][3]==x || mt[5][4]==x || mt[5][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][8]!=x & mt[1][8]!=x & mt[2][8]!=x & mt[3][8]!=x & mt[5][8]!=x & mt[6][8]!=x & mt[7][8]!=x & mt[8][8]!=x &
+                                            mt[4][0]!=x & mt[4][1]!=x & mt[4][2]!=x & mt[4][3]!=x & mt[4][4]!=x & mt[4][5]!=x & mt[4][6]!=x & mt[4][7]!=x &
+                                            mt[3][6]!=x & mt[3][7]!=x & mt[5][6]!=x & mt[5][7]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][8].compareTo("")!=0 & mat[5][8].compareTo("")!=0) {
+                                            mt[4][8] = x;
+                                            mat[4][8] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[4][6].compareTo("")!=0 & mat[4][7].compareTo("")!=0) {
+                                            mt[4][8] = x;
+                                            mat[4][8] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         
                         
                     
