@@ -1,24 +1,13 @@
 
-import java.util.Scanner;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package Final;
 
 /**
  *
- * @author yolanda
+ * @author tony
  */
 public class Sudoku extends javax.swing.JFrame {
-    
-
-    private int[][] matriz;
-    private Scanner teclado;
-    private int mt[][];
-    private String mat[][];
-    
+    private String[][] mat;
+    private int[][] mt;
     private boolean row1;
     private boolean row2;
     private boolean row3;
@@ -40,17 +29,27 @@ public class Sudoku extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel8 = new javax.swing.JPanel();
-        tf88 = new javax.swing.JTextField();
-        tf66 = new javax.swing.JTextField();
-        tf67 = new javax.swing.JTextField();
-        tf68 = new javax.swing.JTextField();
-        tf76 = new javax.swing.JTextField();
-        tf77 = new javax.swing.JTextField();
-        tf78 = new javax.swing.JTextField();
-        tf86 = new javax.swing.JTextField();
-        tf87 = new javax.swing.JTextField();
-        jPanel6 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        tf30 = new javax.swing.JTextField();
+        tf31 = new javax.swing.JTextField();
+        tf32 = new javax.swing.JTextField();
+        tf40 = new javax.swing.JTextField();
+        tf41 = new javax.swing.JTextField();
+        tf42 = new javax.swing.JTextField();
+        tf50 = new javax.swing.JTextField();
+        tf51 = new javax.swing.JTextField();
+        tf52 = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        tf63 = new javax.swing.JTextField();
+        tf64 = new javax.swing.JTextField();
+        tf65 = new javax.swing.JTextField();
+        tf73 = new javax.swing.JTextField();
+        tf74 = new javax.swing.JTextField();
+        tf75 = new javax.swing.JTextField();
+        tf83 = new javax.swing.JTextField();
+        tf84 = new javax.swing.JTextField();
+        tf85 = new javax.swing.JTextField();
+        jPanel4 = new javax.swing.JPanel();
         tf60 = new javax.swing.JTextField();
         tf61 = new javax.swing.JTextField();
         tf62 = new javax.swing.JTextField();
@@ -60,17 +59,18 @@ public class Sudoku extends javax.swing.JFrame {
         tf80 = new javax.swing.JTextField();
         tf81 = new javax.swing.JTextField();
         tf82 = new javax.swing.JTextField();
-        jPanel7 = new javax.swing.JPanel();
-        tf65 = new javax.swing.JTextField();
-        tf73 = new javax.swing.JTextField();
-        tf74 = new javax.swing.JTextField();
-        tf75 = new javax.swing.JTextField();
-        tf83 = new javax.swing.JTextField();
-        tf84 = new javax.swing.JTextField();
-        tf85 = new javax.swing.JTextField();
-        tf63 = new javax.swing.JTextField();
-        tf64 = new javax.swing.JTextField();
-        jPanel15 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        tf66 = new javax.swing.JTextField();
+        tf67 = new javax.swing.JTextField();
+        tf68 = new javax.swing.JTextField();
+        tf76 = new javax.swing.JTextField();
+        tf77 = new javax.swing.JTextField();
+        tf78 = new javax.swing.JTextField();
+        tf86 = new javax.swing.JTextField();
+        tf87 = new javax.swing.JTextField();
+        tf88 = new javax.swing.JTextField();
+        jPanel6 = new javax.swing.JPanel();
+        tf36 = new javax.swing.JTextField();
         tf37 = new javax.swing.JTextField();
         tf38 = new javax.swing.JTextField();
         tf46 = new javax.swing.JTextField();
@@ -79,28 +79,8 @@ public class Sudoku extends javax.swing.JFrame {
         tf56 = new javax.swing.JTextField();
         tf57 = new javax.swing.JTextField();
         tf58 = new javax.swing.JTextField();
-        tf36 = new javax.swing.JTextField();
-        jPanel12 = new javax.swing.JPanel();
-        tf08 = new javax.swing.JTextField();
-        tf16 = new javax.swing.JTextField();
-        tf17 = new javax.swing.JTextField();
-        tf18 = new javax.swing.JTextField();
-        tf26 = new javax.swing.JTextField();
-        tf27 = new javax.swing.JTextField();
-        tf28 = new javax.swing.JTextField();
-        tf06 = new javax.swing.JTextField();
-        tf07 = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
-        tf01 = new javax.swing.JTextField();
-        tf02 = new javax.swing.JTextField();
-        tf10 = new javax.swing.JTextField();
-        tf11 = new javax.swing.JTextField();
-        tf12 = new javax.swing.JTextField();
-        tf20 = new javax.swing.JTextField();
-        tf21 = new javax.swing.JTextField();
-        tf22 = new javax.swing.JTextField();
-        tf00 = new javax.swing.JTextField();
-        jPanel14 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        tf33 = new javax.swing.JTextField();
         tf34 = new javax.swing.JTextField();
         tf35 = new javax.swing.JTextField();
         tf43 = new javax.swing.JTextField();
@@ -109,18 +89,9 @@ public class Sudoku extends javax.swing.JFrame {
         tf53 = new javax.swing.JTextField();
         tf54 = new javax.swing.JTextField();
         tf55 = new javax.swing.JTextField();
-        tf33 = new javax.swing.JTextField();
-        jPanel13 = new javax.swing.JPanel();
-        tf31 = new javax.swing.JTextField();
-        tf32 = new javax.swing.JTextField();
-        tf40 = new javax.swing.JTextField();
-        tf41 = new javax.swing.JTextField();
-        tf42 = new javax.swing.JTextField();
-        tf50 = new javax.swing.JTextField();
-        tf51 = new javax.swing.JTextField();
-        tf52 = new javax.swing.JTextField();
-        tf30 = new javax.swing.JTextField();
-        jPanel11 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        tf03 = new javax.swing.JTextField();
+        tf04 = new javax.swing.JTextField();
         tf05 = new javax.swing.JTextField();
         tf13 = new javax.swing.JTextField();
         tf14 = new javax.swing.JTextField();
@@ -128,903 +99,899 @@ public class Sudoku extends javax.swing.JFrame {
         tf23 = new javax.swing.JTextField();
         tf24 = new javax.swing.JTextField();
         tf25 = new javax.swing.JTextField();
-        tf03 = new javax.swing.JTextField();
-        tf04 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jPanel9 = new javax.swing.JPanel();
+        tf06 = new javax.swing.JTextField();
+        tf07 = new javax.swing.JTextField();
+        tf08 = new javax.swing.JTextField();
+        tf16 = new javax.swing.JTextField();
+        tf17 = new javax.swing.JTextField();
+        tf18 = new javax.swing.JTextField();
+        tf26 = new javax.swing.JTextField();
+        tf27 = new javax.swing.JTextField();
+        tf28 = new javax.swing.JTextField();
+        jPanel10 = new javax.swing.JPanel();
+        tf00 = new javax.swing.JTextField();
+        tf01 = new javax.swing.JTextField();
+        tf02 = new javax.swing.JTextField();
+        tf10 = new javax.swing.JTextField();
+        tf11 = new javax.swing.JTextField();
+        tf12 = new javax.swing.JTextField();
+        tf20 = new javax.swing.JTextField();
+        tf21 = new javax.swing.JTextField();
+        tf22 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("paulina mamasita");
+        setForeground(java.awt.Color.black);
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.setPreferredSize(new java.awt.Dimension(75, 75));
 
-        tf88.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf88.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf30.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf30.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf66.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf31.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf67.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf32.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf68.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf40.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf40.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf76.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf76.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf41.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf41.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf77.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf77.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf42.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf42.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf78.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf78.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf50.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf50.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf86.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf86.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf51.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf51.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf87.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf87.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf52.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf52.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf52.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tf86, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf76, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf66, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(tf67, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(tf30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf68, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(tf77, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf78, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(tf87, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf88, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(tf31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tf32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(tf40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(tf50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf60.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf60.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf61.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf62.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf62.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf70.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf71.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf72.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf72.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf80.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf80.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf81.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf81.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf82.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf82.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tf80, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf70, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf60, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(tf61, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf62, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(tf71, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf72, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(tf81, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf82, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf65.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf73.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf73.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf74.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf74.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf75.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf75.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf83.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf83.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf84.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf84.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf85.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf85.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.setPreferredSize(new java.awt.Dimension(75, 75));
 
         tf63.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf63.setPreferredSize(new java.awt.Dimension(25, 25));
 
         tf64.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf64.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tf83, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf73, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf63, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(tf64, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+        tf65.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf65.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf73.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf73.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf73.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf74.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf74.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf74.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf75.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf75.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf75.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf83.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf83.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf83.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf84.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf84.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf84.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf85.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf85.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf85.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(tf63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf65, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(tf74, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf75, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(tf84, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf85, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(tf64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tf65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(tf73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(tf83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf37.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf38.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf46.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf47.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf48.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf56.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf56.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf57.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf58.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tf56, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf46, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf36, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(tf37, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf38, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(tf47, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf48, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(tf57, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf58, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        jPanel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf08.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf08.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf26.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf27.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf28.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf06.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf06.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf07.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf07.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tf26, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf16, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf06, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addComponent(tf07, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf08, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addComponent(tf17, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf18, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addComponent(tf27, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf28, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf08, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.setPreferredSize(new java.awt.Dimension(75, 75));
 
-        tf01.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf01.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf60.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf60.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf60.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf02.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf02.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf61.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf61.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf62.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf62.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf62.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf70.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf70.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf71.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf71.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf72.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf72.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf72.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf80.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf80.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf80.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf81.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf81.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf81.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf00.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf00.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf82.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf82.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf82.setPreferredSize(new java.awt.Dimension(25, 25));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tf20, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf10, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf00, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(tf01, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tf60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf02, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tf61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tf62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(tf11, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf12, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(tf21, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf22, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(tf70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(tf80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf00, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf02, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(tf70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(tf80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.setPreferredSize(new java.awt.Dimension(75, 75));
 
-        tf34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf66.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf66.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf67.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf67.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf43.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf68.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf68.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf44.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf76.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf76.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf76.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf45.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf77.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf77.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf77.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf53.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf78.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf78.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf78.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf54.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf86.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf86.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf86.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        tf55.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf87.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf87.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf87.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf88.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf88.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf88.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(tf66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tf68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(tf76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(tf86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel6.setPreferredSize(new java.awt.Dimension(75, 75));
+
+        tf36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf36.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf37.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf37.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf38.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf38.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf46.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf46.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf47.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf47.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf48.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf48.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf56.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf56.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf56.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf57.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf57.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf58.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf58.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(tf36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tf38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(tf46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(tf56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel7.setPreferredSize(new java.awt.Dimension(75, 75));
 
         tf33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf33.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tf53, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf43, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf33, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addComponent(tf34, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+        tf34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf34.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf35.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf43.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf43.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf44.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf44.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf45.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf45.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf53.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf53.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf54.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf54.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf55.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf55.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(tf33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf35, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addComponent(tf44, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf45, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addComponent(tf54, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf55, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(tf34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tf35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(tf43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(tf53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf40.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf41.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf42.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf50.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf51.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf52.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf52.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf30.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tf50, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf40, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf30, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addComponent(tf31, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf32, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addComponent(tf41, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf42, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addComponent(tf51, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf52, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf05.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf05.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf24.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        tf25.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel8.setPreferredSize(new java.awt.Dimension(75, 75));
 
         tf03.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf03.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf03.setPreferredSize(new java.awt.Dimension(25, 25));
 
         tf04.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf04.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf04.setPreferredSize(new java.awt.Dimension(25, 25));
 
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tf23, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf13, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf03, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(tf04, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+        tf05.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf05.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf05.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf13.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf14.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf15.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf23.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf24.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf24.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf25.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf25.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(tf03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf05, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(tf14, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf15, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(tf24, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf25, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(tf04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tf05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(tf13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(tf23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jButton1.setFont(new java.awt.Font("Hack", 0, 11)); // NOI18N
-        jButton1.setText("Check");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Sudoku.this.actionPerformed(evt);
-            }
-        });
+        jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel9.setPreferredSize(new java.awt.Dimension(75, 75));
+
+        tf06.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf06.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf06.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf07.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf07.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf07.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf08.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf08.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf08.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf16.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf17.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf18.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf26.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf26.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf27.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf27.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf28.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf28.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(tf06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tf08, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(tf16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(tf26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf08, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel10.setPreferredSize(new java.awt.Dimension(75, 75));
+
+        tf00.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf00.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf00.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf01.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf01.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf01.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf02.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf02.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf02.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf10.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf11.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf12.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf20.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf21.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        tf22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tf22.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(tf00, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tf02, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(tf10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(tf20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf00, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf02, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(149, 149, 149)
+                .addGap(121, 121, 121)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(159, Short.MAX_VALUE))
+                            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(95, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addComponent(jButton1)
-                .addContainerGap(63, Short.MAX_VALUE))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42))
         );
-
-        getAccessibleContext().setAccessibleName("");
-        getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void defineMatriz() {
-        teclado = new Scanner(System.in);
-        matriz = new int[9][9];
-        
-        matriz[0][0] = Integer.parseInt(tf00.getText());
-        matriz[0][1] = Integer.parseInt(tf01.getText());
-        matriz[0][2] = Integer.parseInt(tf02.getText());
-        matriz[0][3] = Integer.parseInt(tf03.getText());
-        matriz[0][4] = Integer.parseInt(tf04.getText());
-        matriz[0][5] = Integer.parseInt(tf05.getText());
-        matriz[0][6] = Integer.parseInt(tf06.getText());
-        matriz[0][7] = Integer.parseInt(tf07.getText());
-        matriz[0][8] = Integer.parseInt(tf08.getText());
-        
-        matriz[1][0] = Integer.parseInt(tf10.getText());
-        matriz[1][1] = Integer.parseInt(tf11.getText());
-        matriz[1][2] = Integer.parseInt(tf12.getText());
-        matriz[1][3] = Integer.parseInt(tf13.getText());
-        matriz[1][4] = Integer.parseInt(tf14.getText());
-        matriz[1][5] = Integer.parseInt(tf15.getText());
-        matriz[1][6] = Integer.parseInt(tf16.getText());
-        matriz[1][7] = Integer.parseInt(tf17.getText());
-        matriz[1][8] = Integer.parseInt(tf18.getText());
-        
-        matriz[2][0] = Integer.parseInt(tf20.getText());
-        matriz[2][1] = Integer.parseInt(tf21.getText());
-        matriz[2][2] = Integer.parseInt(tf22.getText());
-        matriz[2][3] = Integer.parseInt(tf23.getText());
-        matriz[2][4] = Integer.parseInt(tf24.getText());
-        matriz[2][5] = Integer.parseInt(tf25.getText());
-        matriz[2][6] = Integer.parseInt(tf26.getText());
-        matriz[2][7] = Integer.parseInt(tf27.getText());
-        matriz[2][8] = Integer.parseInt(tf28.getText());
-        
-        matriz[3][0] = Integer.parseInt(tf30.getText());
-        matriz[3][1] = Integer.parseInt(tf31.getText());
-        matriz[3][2] = Integer.parseInt(tf32.getText());
-        matriz[3][3] = Integer.parseInt(tf33.getText());
-        matriz[3][4] = Integer.parseInt(tf34.getText());
-        matriz[3][5] = Integer.parseInt(tf35.getText());
-        matriz[3][6] = Integer.parseInt(tf36.getText());
-        matriz[3][7] = Integer.parseInt(tf37.getText());
-        matriz[3][8] = Integer.parseInt(tf38.getText());
-        
-        matriz[4][0] = Integer.parseInt(tf40.getText());
-        matriz[4][1] = Integer.parseInt(tf41.getText());
-        matriz[4][2] = Integer.parseInt(tf42.getText());
-        matriz[4][3] = Integer.parseInt(tf43.getText());
-        matriz[4][4] = Integer.parseInt(tf44.getText());
-        matriz[4][5] = Integer.parseInt(tf45.getText());
-        matriz[4][6] = Integer.parseInt(tf46.getText());
-        matriz[4][7] = Integer.parseInt(tf47.getText());
-        matriz[4][8] = Integer.parseInt(tf48.getText());
-        
-        matriz[5][0] = Integer.parseInt(tf50.getText());
-        matriz[5][1] = Integer.parseInt(tf51.getText());
-        matriz[5][2] = Integer.parseInt(tf52.getText());
-        matriz[5][3] = Integer.parseInt(tf53.getText());
-        matriz[5][4] = Integer.parseInt(tf54.getText());
-        matriz[5][5] = Integer.parseInt(tf55.getText());
-        matriz[5][6] = Integer.parseInt(tf56.getText());
-        matriz[5][7] = Integer.parseInt(tf57.getText());
-        matriz[5][8] = Integer.parseInt(tf58.getText());
-        
-        matriz[6][0] = Integer.parseInt(tf60.getText());
-        matriz[6][1] = Integer.parseInt(tf61.getText());
-        matriz[6][2] = Integer.parseInt(tf62.getText());
-        matriz[6][3] = Integer.parseInt(tf63.getText());
-        matriz[6][4] = Integer.parseInt(tf64.getText());
-        matriz[6][5] = Integer.parseInt(tf65.getText());
-        matriz[6][6] = Integer.parseInt(tf66.getText());
-        matriz[6][7] = Integer.parseInt(tf67.getText());
-        matriz[6][8] = Integer.parseInt(tf68.getText());
-        
-        matriz[7][0] = Integer.parseInt(tf70.getText());
-        matriz[7][1] = Integer.parseInt(tf71.getText());
-        matriz[7][2] = Integer.parseInt(tf72.getText());
-        matriz[7][3] = Integer.parseInt(tf73.getText());
-        matriz[7][4] = Integer.parseInt(tf74.getText());
-        matriz[7][5] = Integer.parseInt(tf75.getText());
-        matriz[7][6] = Integer.parseInt(tf76.getText());
-        matriz[7][7] = Integer.parseInt(tf77.getText());
-        matriz[7][8] = Integer.parseInt(tf78.getText());
-        
-        matriz[8][0] = Integer.parseInt(tf80.getText());
-        matriz[8][1] = Integer.parseInt(tf81.getText());
-        matriz[8][2] = Integer.parseInt(tf82.getText());
-        matriz[8][3] = Integer.parseInt(tf83.getText());
-        matriz[8][4] = Integer.parseInt(tf84.getText());
-        matriz[8][5] = Integer.parseInt(tf85.getText());
-        matriz[8][6] = Integer.parseInt(tf86.getText());
-        matriz[8][7] = Integer.parseInt(tf87.getText());
-        matriz[8][8] = Integer.parseInt(tf88.getText());
-        
-        
-        
-        int row0 = matriz[0][0] + matriz[0][1] + matriz[0][2] + matriz[0][3] + 
-                matriz[0][4] + matriz[0][5] + matriz[0][6] + matriz[0][7] + matriz[0][8];
-        
-        int row1 = matriz[1][0] + matriz[1][1] + matriz[1][2] + matriz[1][3] +
-                matriz[1][4] + matriz[1][5] + matriz[1][6] + matriz[1][7] + matriz[1][8];
-        
-        int row2 = matriz[2][0] + matriz[2][1] + matriz[2][2] + matriz[2][3] +
-                matriz[2][4] + matriz[2][5] + matriz[2][6] + matriz[2][7] + matriz[2][8];
-        
-        int row3 = matriz[3][0] + matriz[3][1] + matriz[3][2] + matriz[3][3] +
-                matriz[3][4] + matriz[3][5] + matriz[3][6] + matriz[3][7] + matriz[3][8];
-        
-        int row4 = matriz[4][0] + matriz[4][1] + matriz[4][2] + matriz[4][3] +
-                matriz[4][4] + matriz[4][5] + matriz[4][6] + matriz[4][7] + matriz[4][8];
-        
-        int row5 = matriz[5][0] + matriz[5][1] + matriz[5][2] + matriz[5][3] +
-                matriz[5][4] + matriz[5][5] + matriz[5][6] + matriz[5][7] + matriz[5][8];
-        
-        int row6 = matriz[6][0] + matriz[6][1] + matriz[6][2] + matriz[6][3] +
-                matriz[6][4] + matriz[6][5] + matriz[6][6] + matriz[6][7] + matriz[6][8];
-        
-        int row7 = matriz[7][0] + matriz[7][1] + matriz[7][2] + matriz[7][3] + 
-                matriz[7][4] + matriz[7][5] + matriz[7][6] + matriz[7][7] + matriz[7][8];
-        
-        int row8 = matriz[8][0] + matriz[8][1] + matriz[8][2] + matriz[8][3] +
-                matriz[8][4] + matriz[8][5] + matriz[8][6] + matriz[8][7] + matriz[8][8];
-        
-        int rowTotal = row0 + row1 + row2 + row3 + row4 + row5 + row6 + row7 + row8;
-        
-        while (rowTotal != 360) {
-            for (int f=0; f<mat.length; f++) {
-                for (int c=0; c<mat[f].length; c++) {
-                    if (mat[f][c] == "") {
-                        
-                    }
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
                 }
             }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Sudoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Sudoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Sudoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Sudoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
-        
-        if (row0 == 45 & row1 == 45 & row2 == 45 & row3 == 45 & row3 == 45
-                & row4 == 45 & row5 == 45 & row6 == 45 & row7 == 45 & row8 == 45) {
-            System.out.println("Bien hecho maquinola");
-        } 
-        else {
-            System.out.println("mal hecho maquinola");
-        }
-        
-        
-        
-        /*
-        Código para mostrar en pantalla los valores ingresados por el usuario
-        
-        for (int f=0; f<matriz.length; f++) {
-            System.out.println("\n");
-            for (int c=0; c<matriz[f].length; c++) {
-                System.out.println(f+","+c+": "+matriz[f][c]);
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Sudoku().setVisible(true);
             }
-        }
-        */
+        });
     }
+    
+    
     private void checkSudoku() { //Funcion para validar cuando esta lleno el sudoku
       
         
@@ -1136,9 +1103,7 @@ public class Sudoku extends javax.swing.JFrame {
         
         for (int c=0; c<mat.length; c++) {
                 for (int f=0; f<mat[c].length; f++) {
-                    try {
-                        
-
+                    
                         if (c==0 & f==0) { 
                             if (mat[c][f].equalsIgnoreCase("")) {
                                 
@@ -1185,7 +1150,6 @@ public class Sudoku extends javax.swing.JFrame {
                                                 mt[0][0]=x;
                                                 mat[0][0]=String.valueOf(x);
                                             }
-                                        
                                     }
                                 }
                             }    
@@ -1343,8 +1307,6 @@ public class Sudoku extends javax.swing.JFrame {
                                         }
                                       
                                     }
-                                    
-                                    
                                 }
                             } 
                         }
@@ -1548,8 +1510,6 @@ public class Sudoku extends javax.swing.JFrame {
                                         }
                                       
                                     }
-                                    
-                                    
                                 }
                             }
                         }
@@ -2189,7 +2149,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[2][2] = x;
                                             mat[2][2] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2385,7 +2344,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[2][6] = x;
                                             mat[2][6] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2434,7 +2392,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[2][7] = x;
                                             mat[2][7] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2483,7 +2440,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[2][8] = x;
                                             mat[2][8] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2532,7 +2488,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[3][0] = x;
                                             mat[3][0] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2581,7 +2536,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[3][1] = x;
                                             mat[3][1] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2630,7 +2584,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[3][2] = x;
                                             mat[3][2] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2679,7 +2632,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[3][3] = x;
                                             mat[3][3] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2728,7 +2680,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[3][4] = x;
                                             mat[3][4] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2777,7 +2728,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[3][5] = x;
                                             mat[3][5] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2826,7 +2776,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[3][6] = x;
                                             mat[3][6] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2875,7 +2824,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[3][7] = x;
                                             mat[3][7] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2924,7 +2872,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[3][8] = x;
                                             mat[3][8] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -2973,7 +2920,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[4][0] = x;
                                             mat[4][0] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -3022,7 +2968,6 @@ public class Sudoku extends javax.swing.JFrame {
                                             mt[4][1] = x;
                                             mat[4][1] = String.valueOf(x);
                                         }
-                                      
                                     }
                                 }
                             }
@@ -3364,205 +3309,1747 @@ public class Sudoku extends javax.swing.JFrame {
                             }
                         }
                         
+                        if (c==5 & f==0) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][1]==x || mt[1][1]==x || mt[2][1]==x || mt[6][1]==x || mt[7][1]==x || mt[8][1]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][2]==x || mt[1][2]==x || mt[2][2]==x || mt[6][2]==x || mt[7][2]==x || mt[8][2]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][3]==x || mt[3][4]==x || mt[3][5]==x || mt[3][6]==x || mt[3][7]==x || mt[3][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[4][3]==x || mt[4][4]==x || mt[4][5]==x || mt[4][6]==x || mt[4][7]==x || mt[4][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][0]!=x & mt[1][0]!=x & mt[2][0]!=x & mt[3][0]!=x & mt[4][0]!=x & mt[6][0]!=x & mt[7][0]!=x & mt[8][0]!=x &
+                                            mt[5][1]!=x & mt[5][2]!=x & mt[5][3]!=x & mt[5][4]!=x & mt[5][5]!=x & mt[5][6]!=x & mt[5][7]!=x & mt[5][8]!=x &
+                                            mt[3][1]!=x & mt[3][2]!=x & mt[4][1]!=x & mt[4][2]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][0].compareTo("")!=0 & mat[4][0].compareTo("")!=0) {
+                                            mt[5][0] = x;
+                                            mat[5][0] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[5][1].compareTo("")!=0 & mat[5][2].compareTo("")!=0) {
+                                            mt[5][0] = x;
+                                            mat[5][0] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         
-                    
-                }catch (java.lang.NullPointerException ae) {
-                        System.out.println("Error capturado");
-                    }
-            }
-        
-    }
-    private void efectuarSudoku() {
-        
-        String mat[][];
-        
-        mat = new String[9][9];
-        
-        mat[0][0] = tf00.getText();
-        mat[0][1] = tf01.getText();
-        mat[0][2] = tf02.getText();
-        mat[0][3] = tf03.getText();
-        mat[0][4] = tf04.getText();
-        mat[0][5] = tf05.getText();
-        mat[0][6] = tf06.getText();
-        mat[0][7] = tf07.getText();
-        mat[0][8] = tf08.getText();
-
-        mat[1][0] = tf10.getText();
-        mat[1][1] = tf11.getText();
-        mat[1][2] = tf12.getText();
-        mat[1][3] = tf13.getText();
-        mat[1][4] = tf14.getText();
-        mat[1][5] = tf15.getText();
-        mat[1][6] = tf16.getText();
-        mat[1][7] = tf17.getText();
-        mat[1][8] = tf18.getText();
-
-        mat[2][0] = tf20.getText();
-        mat[2][1] = tf21.getText();
-        mat[2][2] = tf22.getText();
-        mat[2][3] = tf23.getText();
-        mat[2][4] = tf24.getText();
-        mat[2][5] = tf25.getText();
-        mat[2][6] = tf26.getText();
-        mat[2][7] = tf27.getText();
-        mat[2][8] = tf28.getText();
-
-        mat[3][0] = tf30.getText();
-        mat[3][1] = tf31.getText();
-        mat[3][2] = tf32.getText();
-        mat[3][3] = tf33.getText();
-        mat[3][4] = tf34.getText();
-        mat[3][5] = tf35.getText();
-        mat[3][6] = tf36.getText();
-        mat[3][7] = tf37.getText();
-        mat[3][8] = tf38.getText();
-
-        mat[4][0] = tf40.getText();
-        mat[4][1] = tf41.getText();
-        mat[4][2] = tf42.getText();
-        mat[4][3] = tf43.getText();
-        mat[4][4] = tf44.getText();
-        mat[4][5] = tf45.getText();
-        mat[4][6] = tf46.getText();
-        mat[4][7] = tf47.getText();
-        mat[4][8] = tf48.getText();
-
-        mat[5][0] = tf50.getText();
-        mat[5][1] = tf51.getText();
-        mat[5][2] = tf52.getText();
-        mat[5][3] = tf53.getText();
-        mat[5][4] = tf54.getText();
-        mat[5][5] = tf55.getText();
-        mat[5][6] = tf56.getText();
-        mat[5][7] = tf57.getText();
-        mat[5][8] = tf58.getText();
-
-        mat[6][0] = tf60.getText();
-        mat[6][1] = tf61.getText();
-        mat[6][2] = tf62.getText();
-        mat[6][3] = tf63.getText();
-        mat[6][4] = tf64.getText();
-        mat[6][5] = tf65.getText();
-        mat[6][6] = tf66.getText();
-        mat[6][7] = tf67.getText();
-        mat[6][8] = tf68.getText();
-
-        mat[7][0] = tf70.getText();
-        mat[7][1] = tf71.getText();
-        mat[7][2] = tf72.getText();
-        mat[7][3] = tf73.getText();
-        mat[7][4] = tf74.getText();
-        mat[7][5] = tf75.getText();
-        mat[7][6] = tf76.getText();
-        mat[7][7] = tf77.getText();
-        mat[7][8] = tf78.getText();
-
-        mat[8][0] = tf80.getText();
-        mat[8][1] = tf81.getText();
-        mat[8][2] = tf82.getText();
-        mat[8][3] = tf83.getText();
-        mat[8][4] = tf84.getText();
-        mat[8][5] = tf85.getText();
-        mat[8][6] = tf86.getText();
-        mat[8][7] = tf87.getText();
-        mat[8][8] = tf88.getText();
-            
-            
-                
-        
-        
-        int row0 = Integer.parseInt(mat[0][0]) + Integer.parseInt(mat[0][1]) + Integer.parseInt(mat[0][2]) + Integer.parseInt(mat[0][3]) + 
-                Integer.parseInt(mat[0][4]) + Integer.parseInt(mat[0][5]) + Integer.parseInt(mat[0][6]) + Integer.parseInt(mat[0][7]) + Integer.parseInt(mat[0][8]);
-        
-        int row1 = Integer.parseInt(mat[1][0]) + Integer.parseInt(mat[1][1]) + Integer.parseInt(mat[1][2]) + Integer.parseInt(mat[1][3]) + 
-                Integer.parseInt(mat[1][4]) + Integer.parseInt(mat[1][5]) + Integer.parseInt(mat[1][6]) + Integer.parseInt(mat[1][7]) + Integer.parseInt(mat[1][8]);
-        
-        int row2 = Integer.parseInt(mat[2][0]) + Integer.parseInt(mat[2][1]) + Integer.parseInt(mat[2][2]) + Integer.parseInt(mat[2][3]) + 
-                Integer.parseInt(mat[2][4]) + Integer.parseInt(mat[2][5]) + Integer.parseInt(mat[2][6]) + Integer.parseInt(mat[2][7]) + Integer.parseInt(mat[2][8]);
-        
-        int row3 = Integer.parseInt(mat[3][0]) + Integer.parseInt(mat[3][1]) + Integer.parseInt(mat[3][2]) + Integer.parseInt(mat[3][3]) + 
-                Integer.parseInt(mat[3][4]) + Integer.parseInt(mat[3][5]) + Integer.parseInt(mat[3][6]) + Integer.parseInt(mat[3][7]) + Integer.parseInt(mat[3][8]);
-        
-        int row4 = Integer.parseInt(mat[4][0]) + Integer.parseInt(mat[4][1]) + Integer.parseInt(mat[4][2]) + Integer.parseInt(mat[4][3]) + 
-                Integer.parseInt(mat[4][4]) + Integer.parseInt(mat[4][5]) + Integer.parseInt(mat[4][6]) + Integer.parseInt(mat[4][7]) + Integer.parseInt(mat[4][8]);
-        
-        int row5 = Integer.parseInt(mat[5][0]) + Integer.parseInt(mat[5][1]) + Integer.parseInt(mat[5][2]) + Integer.parseInt(mat[5][3]) + 
-                Integer.parseInt(mat[5][4]) + Integer.parseInt(mat[5][5]) + Integer.parseInt(mat[5][6]) + Integer.parseInt(mat[5][7]) + Integer.parseInt(mat[5][8]);
-        
-        int row6 = Integer.parseInt(mat[6][0]) + Integer.parseInt(mat[6][1]) + Integer.parseInt(mat[6][2]) + Integer.parseInt(mat[6][3]) + 
-                Integer.parseInt(mat[6][4]) + Integer.parseInt(mat[6][5]) + Integer.parseInt(mat[6][6]) + Integer.parseInt(mat[6][7]) + Integer.parseInt(mat[6][8]);
-        
-        int row7 = Integer.parseInt(mat[7][0]) + Integer.parseInt(mat[7][1]) + Integer.parseInt(mat[7][2]) + Integer.parseInt(mat[7][3]) + 
-                Integer.parseInt(mat[7][4]) + Integer.parseInt(mat[7][5]) + Integer.parseInt(mat[7][6]) + Integer.parseInt(mat[7][7]) + Integer.parseInt(mat[7][8]);
-        
-        int row8 = Integer.parseInt(mat[8][0]) + Integer.parseInt(mat[8][1]) + Integer.parseInt(mat[8][2]) + Integer.parseInt(mat[8][3]) + 
-                Integer.parseInt(mat[8][4]) + Integer.parseInt(mat[8][5]) + Integer.parseInt(mat[8][6]) + Integer.parseInt(mat[8][7]) + Integer.parseInt(mat[8][8]);
-        
-        int rowTotal = row0 + row1 + row2 + row3 + row4 + row5 + row6 + row7 + row8;
-        
-        while (rowTotal != 360) {
-            for (int f=0; f<mat.length; f++) {
-                for (int c=0; c<mat[f].length; c++) {
-                    if (mat[f][c] == "") {
+                        if (c==5 & f==1) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][0]==x || mt[1][0]==x || mt[2][0]==x || mt[6][0]==x || mt[7][0]==x || mt[8][0]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][2]==x || mt[1][2]==x || mt[2][2]==x || mt[6][2]==x || mt[7][2]==x || mt[8][2]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][3]==x || mt[3][4]==x || mt[3][5]==x || mt[3][6]==x || mt[3][7]==x || mt[3][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[4][3]==x || mt[4][4]==x || mt[4][5]==x || mt[4][6]==x || mt[4][7]==x || mt[4][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][1]!=x & mt[1][1]!=x & mt[2][1]!=x & mt[3][1]!=x & mt[4][1]!=x & mt[6][1]!=x & mt[7][1]!=x & mt[8][1]!=x &
+                                            mt[5][0]!=x & mt[5][2]!=x & mt[5][3]!=x & mt[5][4]!=x & mt[5][5]!=x & mt[5][6]!=x & mt[5][7]!=x & mt[5][8]!=x &
+                                            mt[3][0]!=x & mt[3][2]!=x & mt[4][0]!=x & mt[4][2]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][1].compareTo("")!=0 & mat[4][1].compareTo("")!=0) {
+                                            mt[5][1] = x;
+                                            mat[5][1] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[5][0].compareTo("")!=0 & mat[5][2].compareTo("")!=0) {
+                                            mt[5][1] = x;
+                                            mat[5][1] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         
+                        if (c==5 & f==2) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][0]==x || mt[1][0]==x || mt[2][0]==x || mt[6][0]==x || mt[7][0]==x || mt[8][0]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][1]==x || mt[1][1]==x || mt[2][1]==x || mt[6][1]==x || mt[7][1]==x || mt[8][1]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][3]==x || mt[3][4]==x || mt[3][5]==x || mt[3][6]==x || mt[3][7]==x || mt[3][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[4][3]==x || mt[4][4]==x || mt[4][5]==x || mt[4][6]==x || mt[4][7]==x || mt[4][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][2]!=x & mt[1][2]!=x & mt[2][2]!=x & mt[3][2]!=x & mt[4][2]!=x & mt[6][2]!=x & mt[7][2]!=x & mt[8][2]!=x &
+                                            mt[5][0]!=x & mt[5][1]!=x & mt[5][3]!=x & mt[5][4]!=x & mt[5][5]!=x & mt[5][6]!=x & mt[5][7]!=x & mt[5][8]!=x &
+                                            mt[3][0]!=x & mt[3][1]!=x & mt[4][0]!=x & mt[4][1]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][2].compareTo("")!=0 & mat[4][2].compareTo("")!=0) {
+                                            mt[5][2] = x;
+                                            mat[5][2] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[5][0].compareTo("")!=0 & mat[5][1].compareTo("")!=0) {
+                                            mt[5][2] = x;
+                                            mat[5][2] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==5 & f==3) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][4]==x || mt[1][4]==x || mt[2][4]==x || mt[6][4]==x || mt[7][4]==x || mt[8][4]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][5]==x || mt[1][5]==x || mt[2][5]==x || mt[6][5]==x || mt[7][5]==x || mt[8][5]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][0]==x || mt[3][1]==x || mt[3][2]==x || mt[3][6]==x || mt[3][7]==x || mt[3][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[4][0]==x || mt[4][1]==x || mt[4][2]==x || mt[4][6]==x || mt[4][7]==x || mt[4][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][3]!=x & mt[1][3]!=x & mt[2][3]!=x & mt[3][3]!=x & mt[4][3]!=x & mt[6][3]!=x & mt[7][3]!=x & mt[8][3]!=x &
+                                            mt[5][0]!=x & mt[5][1]!=x & mt[5][2]!=x & mt[5][4]!=x & mt[5][5]!=x & mt[5][6]!=x & mt[5][7]!=x & mt[5][8]!=x &
+                                            mt[3][4]!=x & mt[3][5]!=x & mt[4][4]!=x & mt[4][5]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][3].compareTo("")!=0 & mat[4][3].compareTo("")!=0) {
+                                            mt[5][3] = x;
+                                            mat[5][3] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[5][4].compareTo("")!=0 & mat[5][5].compareTo("")!=0) {
+                                            mt[5][3] = x;
+                                            mat[5][3] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==5 & f==4) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][3]==x || mt[1][3]==x || mt[2][3]==x || mt[6][3]==x || mt[7][3]==x || mt[8][3]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][5]==x || mt[1][5]==x || mt[2][5]==x || mt[6][5]==x || mt[7][5]==x || mt[8][5]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][0]==x || mt[3][1]==x || mt[3][2]==x || mt[3][6]==x || mt[3][7]==x || mt[3][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[4][0]==x || mt[4][1]==x || mt[4][2]==x || mt[4][6]==x || mt[4][7]==x || mt[4][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][4]!=x & mt[1][4]!=x & mt[2][4]!=x & mt[3][4]!=x & mt[4][4]!=x & mt[6][4]!=x & mt[7][4]!=x & mt[8][4]!=x &
+                                            mt[5][0]!=x & mt[5][1]!=x & mt[5][2]!=x & mt[5][3]!=x & mt[5][5]!=x & mt[5][6]!=x & mt[5][7]!=x & mt[5][8]!=x &
+                                            mt[3][3]!=x & mt[3][5]!=x & mt[4][3]!=x & mt[4][5]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][4].compareTo("")!=0 & mat[4][4].compareTo("")!=0) {
+                                            mt[5][4] = x;
+                                            mat[5][4] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[5][3].compareTo("")!=0 & mat[5][5].compareTo("")!=0) {
+                                            mt[5][4] = x;
+                                            mat[5][4] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==5 & f==5) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][3]==x || mt[1][3]==x || mt[2][3]==x || mt[6][3]==x || mt[7][3]==x || mt[8][3]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][4]==x || mt[1][4]==x || mt[2][4]==x || mt[6][4]==x || mt[7][4]==x || mt[8][4]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][0]==x || mt[3][1]==x || mt[3][2]==x || mt[3][6]==x || mt[3][7]==x || mt[3][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[4][0]==x || mt[4][1]==x || mt[4][2]==x || mt[4][6]==x || mt[4][7]==x || mt[4][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][5]!=x & mt[1][5]!=x & mt[2][5]!=x & mt[3][5]!=x & mt[4][5]!=x & mt[6][5]!=x & mt[7][5]!=x & mt[8][5]!=x &
+                                            mt[5][0]!=x & mt[5][1]!=x & mt[5][2]!=x & mt[5][3]!=x & mt[5][4]!=x & mt[5][6]!=x & mt[5][7]!=x & mt[5][8]!=x &
+                                            mt[3][3]!=x & mt[3][4]!=x & mt[4][3]!=x & mt[4][4]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][5].compareTo("")!=0 & mat[4][5].compareTo("")!=0) {
+                                            mt[5][5] = x;
+                                            mat[5][5] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[5][3].compareTo("")!=0 & mat[5][4].compareTo("")!=0) {
+                                            mt[5][5] = x;
+                                            mat[5][5] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==5 & f==6) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][7]==x || mt[1][7]==x || mt[2][7]==x || mt[6][7]==x || mt[7][7]==x || mt[8][7]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][8]==x || mt[1][8]==x || mt[2][8]==x || mt[6][8]==x || mt[7][8]==x || mt[8][8]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][0]==x || mt[3][1]==x || mt[3][2]==x || mt[3][3]==x || mt[3][4]==x || mt[3][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[4][0]==x || mt[4][1]==x || mt[4][2]==x || mt[4][3]==x || mt[4][4]==x || mt[4][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][6]!=x & mt[1][6]!=x & mt[2][6]!=x & mt[3][6]!=x & mt[4][6]!=x & mt[6][6]!=x & mt[7][6]!=x & mt[8][6]!=x &
+                                            mt[5][0]!=x & mt[5][1]!=x & mt[5][2]!=x & mt[5][3]!=x & mt[5][4]!=x & mt[5][5]!=x & mt[5][7]!=x & mt[5][8]!=x &
+                                            mt[3][7]!=x & mt[3][8]!=x & mt[4][7]!=x & mt[4][8]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][6].compareTo("")!=0 & mat[4][6].compareTo("")!=0) {
+                                            mt[5][6] = x;
+                                            mat[5][6] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[5][7].compareTo("")!=0 & mat[5][8].compareTo("")!=0) {
+                                            mt[5][6] = x;
+                                            mat[5][6] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==5 & f==7) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][6]==x || mt[1][6]==x || mt[2][6]==x || mt[6][6]==x || mt[7][6]==x || mt[8][6]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][8]==x || mt[1][8]==x || mt[2][8]==x || mt[6][8]==x || mt[7][8]==x || mt[8][8]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][0]==x || mt[3][1]==x || mt[3][2]==x || mt[3][3]==x || mt[3][4]==x || mt[3][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[4][0]==x || mt[4][1]==x || mt[4][2]==x || mt[4][3]==x || mt[4][4]==x || mt[4][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][7]!=x & mt[1][7]!=x & mt[2][7]!=x & mt[3][7]!=x & mt[4][7]!=x & mt[6][7]!=x & mt[7][7]!=x & mt[8][7]!=x &
+                                            mt[5][0]!=x & mt[5][1]!=x & mt[5][2]!=x & mt[5][3]!=x & mt[5][4]!=x & mt[5][5]!=x & mt[5][6]!=x & mt[5][8]!=x &
+                                            mt[3][6]!=x & mt[3][8]!=x & mt[4][6]!=x & mt[4][8]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][7].compareTo("")!=0 & mat[4][7].compareTo("")!=0) {
+                                            mt[5][7] = x;
+                                            mat[5][7] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[5][6].compareTo("")!=0 & mat[5][8].compareTo("")!=0) {
+                                            mt[5][7] = x;
+                                            mat[5][7] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==5 & f==8) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][7]==x || mt[1][7]==x || mt[2][7]==x || mt[6][7]==x || mt[7][7]==x || mt[8][7]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][8]==x || mt[1][8]==x || mt[2][8]==x || mt[6][8]==x || mt[7][8]==x || mt[8][8]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[3][0]==x || mt[3][1]==x || mt[3][2]==x || mt[3][3]==x || mt[3][4]==x || mt[3][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[4][0]==x || mt[4][1]==x || mt[4][2]==x || mt[4][3]==x || mt[4][4]==x || mt[4][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][8]!=x & mt[1][8]!=x & mt[2][8]!=x & mt[3][8]!=x & mt[4][8]!=x & mt[6][8]!=x & mt[7][8]!=x & mt[8][8]!=x &
+                                            mt[5][0]!=x & mt[5][1]!=x & mt[5][2]!=x & mt[5][3]!=x & mt[5][4]!=x & mt[5][5]!=x & mt[5][6]!=x & mt[5][7]!=x &
+                                            mt[3][6]!=x & mt[3][7]!=x & mt[4][6]!=x & mt[4][7]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[3][8].compareTo("")!=0 & mat[4][8].compareTo("")!=0) {
+                                            mt[5][8] = x;
+                                            mat[5][8] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[5][6].compareTo("")!=0 & mat[5][7].compareTo("")!=0) {
+                                            mt[5][8] = x;
+                                            mat[5][8] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==6 & f==0) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][1]==x || mt[1][1]==x || mt[2][1]==x || mt[3][1]==x || mt[4][1]==x || mt[5][1]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][2]==x || mt[1][2]==x || mt[2][2]==x || mt[3][2]==x || mt[4][2]==x || mt[5][2]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[7][3]==x || mt[7][4]==x || mt[7][5]==x || mt[7][6]==x || mt[7][7]==x || mt[7][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][3]==x || mt[8][4]==x || mt[8][5]==x || mt[8][6]==x || mt[8][7]==x || mt[8][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][0]!=x & mt[1][0]!=x & mt[2][0]!=x & mt[3][0]!=x & mt[4][0]!=x & mt[5][0]!=x & mt[7][0]!=x & mt[8][0]!=x &
+                                            mt[6][1]!=x & mt[6][2]!=x & mt[6][3]!=x & mt[6][4]!=x & mt[6][5]!=x & mt[6][6]!=x & mt[6][7]!=x & mt[6][8]!=x &
+                                            mt[7][1]!=x & mt[7][2]!=x & mt[8][1]!=x & mt[8][2]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[7][0].compareTo("")!=0 & mat[8][0].compareTo("")!=0) {
+                                            mt[6][0] = x;
+                                            mat[6][0] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[6][1].compareTo("")!=0 & mat[6][2].compareTo("")!=0) {
+                                            mt[6][0] = x;
+                                            mat[6][0] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==6 & f==1) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][0]==x || mt[1][0]==x || mt[2][0]==x || mt[3][0]==x || mt[4][0]==x || mt[5][0]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][2]==x || mt[1][2]==x || mt[2][2]==x || mt[3][2]==x || mt[4][2]==x || mt[5][2]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[7][3]==x || mt[7][4]==x || mt[7][5]==x || mt[7][6]==x || mt[7][7]==x || mt[7][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][3]==x || mt[8][4]==x || mt[8][5]==x || mt[8][6]==x || mt[8][7]==x || mt[8][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][1]!=x & mt[1][1]!=x & mt[2][1]!=x & mt[3][1]!=x & mt[4][1]!=x & mt[5][1]!=x & mt[7][1]!=x & mt[8][1]!=x &
+                                            mt[6][0]!=x & mt[6][2]!=x & mt[6][3]!=x & mt[6][4]!=x & mt[6][5]!=x & mt[6][6]!=x & mt[6][7]!=x & mt[6][8]!=x &
+                                            mt[7][0]!=x & mt[7][2]!=x & mt[8][0]!=x & mt[8][2]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[7][1].compareTo("")!=0 & mat[8][1].compareTo("")!=0) {
+                                            mt[6][1] = x;
+                                            mat[6][1] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[6][0].compareTo("")!=0 & mat[6][2].compareTo("")!=0) {
+                                            mt[6][1] = x;
+                                            mat[6][1] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==6 & f==2) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][0]==x || mt[1][0]==x || mt[2][0]==x || mt[3][0]==x || mt[4][0]==x || mt[5][0]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][1]==x || mt[1][1]==x || mt[2][1]==x || mt[3][1]==x || mt[4][1]==x || mt[5][1]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[7][3]==x || mt[7][4]==x || mt[7][5]==x || mt[7][6]==x || mt[7][7]==x || mt[7][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][3]==x || mt[8][4]==x || mt[8][5]==x || mt[8][6]==x || mt[8][7]==x || mt[8][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][2]!=x & mt[1][2]!=x & mt[2][2]!=x & mt[3][2]!=x & mt[4][2]!=x & mt[5][2]!=x & mt[7][2]!=x & mt[8][2]!=x &
+                                            mt[6][0]!=x & mt[6][1]!=x & mt[6][3]!=x & mt[6][4]!=x & mt[6][5]!=x & mt[6][6]!=x & mt[6][7]!=x & mt[6][8]!=x &
+                                            mt[7][0]!=x & mt[7][1]!=x & mt[8][0]!=x & mt[8][1]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[7][2].compareTo("")!=0 & mat[8][2].compareTo("")!=0) {
+                                            mt[6][2] = x;
+                                            mat[6][2] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[6][0].compareTo("")!=0 & mat[6][1].compareTo("")!=0) {
+                                            mt[6][2] = x;
+                                            mat[6][2] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==6 & f==3) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][4]==x || mt[1][4]==x || mt[2][4]==x || mt[3][4]==x || mt[4][4]==x || mt[5][4]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][5]==x || mt[1][5]==x || mt[2][5]==x || mt[3][5]==x || mt[4][5]==x || mt[5][5]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[7][0]==x || mt[7][1]==x || mt[7][2]==x || mt[7][6]==x || mt[7][7]==x || mt[7][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][0]==x || mt[8][1]==x || mt[8][2]==x || mt[8][6]==x || mt[8][7]==x || mt[8][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][3]!=x & mt[1][3]!=x & mt[2][3]!=x & mt[3][3]!=x & mt[4][3]!=x & mt[5][3]!=x & mt[7][3]!=x & mt[8][3]!=x &
+                                            mt[6][0]!=x & mt[6][1]!=x & mt[6][2]!=x & mt[6][4]!=x & mt[6][5]!=x & mt[6][6]!=x & mt[6][7]!=x & mt[6][8]!=x &
+                                            mt[7][4]!=x & mt[7][5]!=x & mt[8][4]!=x & mt[8][5]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[7][3].compareTo("")!=0 & mat[8][3].compareTo("")!=0) {
+                                            mt[6][3] = x;
+                                            mat[6][3] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[6][4].compareTo("")!=0 & mat[6][5].compareTo("")!=0) {
+                                            mt[6][3] = x;
+                                            mat[6][3] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==6 & f==4) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][3]==x || mt[1][3]==x || mt[2][3]==x || mt[3][3]==x || mt[4][3]==x || mt[5][3]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][5]==x || mt[1][5]==x || mt[2][5]==x || mt[3][5]==x || mt[4][5]==x || mt[5][5]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[7][0]==x || mt[7][1]==x || mt[7][2]==x || mt[7][6]==x || mt[7][7]==x || mt[7][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][0]==x || mt[8][1]==x || mt[8][2]==x || mt[8][6]==x || mt[8][7]==x || mt[8][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][4]!=x & mt[1][4]!=x & mt[2][4]!=x & mt[3][4]!=x & mt[4][4]!=x & mt[5][4]!=x & mt[7][4]!=x & mt[8][4]!=x &
+                                            mt[6][0]!=x & mt[6][1]!=x & mt[6][2]!=x & mt[6][3]!=x & mt[6][5]!=x & mt[6][6]!=x & mt[6][7]!=x & mt[6][8]!=x &
+                                            mt[7][3]!=x & mt[7][5]!=x & mt[8][3]!=x & mt[8][5]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[7][4].compareTo("")!=0 & mat[8][4].compareTo("")!=0) {
+                                            mt[6][4] = x;
+                                            mat[6][4] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[6][3].compareTo("")!=0 & mat[6][5].compareTo("")!=0) {
+                                            mt[6][4] = x;
+                                            mat[6][4] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==6 & f==5) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][3]==x || mt[1][3]==x || mt[2][3]==x || mt[3][3]==x || mt[4][3]==x || mt[5][3]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][4]==x || mt[1][4]==x || mt[2][4]==x || mt[3][4]==x || mt[4][4]==x || mt[5][4]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[7][0]==x || mt[7][1]==x || mt[7][2]==x || mt[7][6]==x || mt[7][7]==x || mt[7][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][0]==x || mt[8][1]==x || mt[8][2]==x || mt[8][6]==x || mt[8][7]==x || mt[8][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][5]!=x & mt[1][5]!=x & mt[2][5]!=x & mt[3][5]!=x & mt[4][5]!=x & mt[5][5]!=x & mt[7][5]!=x & mt[8][5]!=x &
+                                            mt[6][0]!=x & mt[6][1]!=x & mt[6][2]!=x & mt[6][3]!=x & mt[6][4]!=x & mt[6][6]!=x & mt[6][7]!=x & mt[6][8]!=x &
+                                            mt[7][3]!=x & mt[7][4]!=x & mt[8][3]!=x & mt[8][4]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[7][5].compareTo("")!=0 & mat[8][5].compareTo("")!=0) {
+                                            mt[6][5] = x;
+                                            mat[6][5] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[6][3].compareTo("")!=0 & mat[6][4].compareTo("")!=0) {
+                                            mt[6][5] = x;
+                                            mat[6][5] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==6 & f==6) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][7]==x || mt[1][7]==x || mt[2][7]==x || mt[3][7]==x || mt[4][7]==x || mt[5][7]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][8]==x || mt[1][8]==x || mt[2][8]==x || mt[3][8]==x || mt[4][8]==x || mt[5][8]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[7][0]==x || mt[7][1]==x || mt[7][2]==x || mt[7][3]==x || mt[7][4]==x || mt[7][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][0]==x || mt[8][1]==x || mt[8][2]==x || mt[8][3]==x || mt[8][4]==x || mt[8][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][6]!=x & mt[1][6]!=x & mt[2][6]!=x & mt[3][6]!=x & mt[4][6]!=x & mt[5][6]!=x & mt[7][6]!=x & mt[8][6]!=x &
+                                            mt[6][0]!=x & mt[6][1]!=x & mt[6][2]!=x & mt[6][3]!=x & mt[6][4]!=x & mt[6][5]!=x & mt[6][7]!=x & mt[6][8]!=x &
+                                            mt[7][7]!=x & mt[7][8]!=x & mt[8][7]!=x & mt[8][8]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[7][6].compareTo("")!=0 & mat[8][6].compareTo("")!=0) {
+                                            mt[6][6] = x;
+                                            mat[6][6] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[6][7].compareTo("")!=0 & mat[6][8].compareTo("")!=0) {
+                                            mt[6][6] = x;
+                                            mat[6][6] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==6 & f==7) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][6]==x || mt[1][6]==x || mt[2][6]==x || mt[3][6]==x || mt[4][6]==x || mt[5][6]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][8]==x || mt[1][8]==x || mt[2][8]==x || mt[3][8]==x || mt[4][8]==x || mt[5][8]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[7][0]==x || mt[7][1]==x || mt[7][2]==x || mt[7][3]==x || mt[7][4]==x || mt[7][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][0]==x || mt[8][1]==x || mt[8][2]==x || mt[8][3]==x || mt[8][4]==x || mt[8][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][7]!=x & mt[1][7]!=x & mt[2][7]!=x & mt[3][7]!=x & mt[4][7]!=x & mt[5][7]!=x & mt[7][7]!=x & mt[8][7]!=x &
+                                            mt[6][0]!=x & mt[6][1]!=x & mt[6][2]!=x & mt[6][3]!=x & mt[6][4]!=x & mt[6][5]!=x & mt[6][6]!=x & mt[6][8]!=x &
+                                            mt[7][6]!=x & mt[7][8]!=x & mt[8][6]!=x & mt[8][8]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[7][7].compareTo("")!=0 & mat[8][7].compareTo("")!=0) {
+                                            mt[6][7] = x;
+                                            mat[6][7] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[6][6].compareTo("")!=0 & mat[6][8].compareTo("")!=0) {
+                                            mt[6][7] = x;
+                                            mat[6][7] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==6 & f==8) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][6]==x || mt[1][6]==x || mt[2][6]==x || mt[3][6]==x || mt[4][6]==x || mt[5][6]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][7]==x || mt[1][7]==x || mt[2][7]==x || mt[3][7]==x || mt[4][7]==x || mt[5][7]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[7][0]==x || mt[7][1]==x || mt[7][2]==x || mt[7][3]==x || mt[7][4]==x || mt[7][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][0]==x || mt[8][1]==x || mt[8][2]==x || mt[8][3]==x || mt[8][4]==x || mt[8][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][8]!=x & mt[1][8]!=x & mt[2][8]!=x & mt[3][8]!=x & mt[4][8]!=x & mt[5][8]!=x & mt[7][8]!=x & mt[8][8]!=x &
+                                            mt[6][0]!=x & mt[6][1]!=x & mt[6][2]!=x & mt[6][3]!=x & mt[6][4]!=x & mt[6][5]!=x & mt[6][6]!=x & mt[6][7]!=x &
+                                            mt[7][6]!=x & mt[7][7]!=x & mt[8][6]!=x & mt[8][7]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[7][8].compareTo("")!=0 & mat[8][8].compareTo("")!=0) {
+                                            mt[6][8] = x;
+                                            mat[6][8] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[6][6].compareTo("")!=0 & mat[6][7].compareTo("")!=0) {
+                                            mt[6][8] = x;
+                                            mat[6][8] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==7 & f==0) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][1]==x || mt[1][1]==x || mt[2][1]==x || mt[3][1]==x || mt[4][1]==x || mt[5][1]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][2]==x || mt[1][2]==x || mt[2][2]==x || mt[3][2]==x || mt[4][2]==x || mt[5][2]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][3]==x || mt[6][4]==x || mt[6][5]==x || mt[6][6]==x || mt[6][7]==x || mt[6][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][3]==x || mt[8][4]==x || mt[8][5]==x || mt[8][6]==x || mt[8][7]==x || mt[8][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][0]!=x & mt[1][0]!=x & mt[2][0]!=x & mt[3][0]!=x & mt[4][0]!=x & mt[5][0]!=x & mt[6][0]!=x & mt[8][0]!=x &
+                                            mt[7][1]!=x & mt[7][2]!=x & mt[7][3]!=x & mt[7][4]!=x & mt[7][5]!=x & mt[7][6]!=x & mt[7][7]!=x & mt[7][8]!=x &
+                                            mt[6][1]!=x & mt[6][2]!=x & mt[8][1]!=x & mt[8][2]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][0].compareTo("")!=0 & mat[8][0].compareTo("")!=0) {
+                                            mt[7][0] = x;
+                                            mat[7][0] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[7][1].compareTo("")!=0 & mat[7][2].compareTo("")!=0) {
+                                            mt[7][0] = x;
+                                            mat[7][0] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==7 & f==1) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][0]==x || mt[1][0]==x || mt[2][0]==x || mt[3][0]==x || mt[4][0]==x || mt[5][0]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][2]==x || mt[1][2]==x || mt[2][2]==x || mt[3][2]==x || mt[4][2]==x || mt[5][2]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][3]==x || mt[6][4]==x || mt[6][5]==x || mt[6][6]==x || mt[6][7]==x || mt[6][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][3]==x || mt[8][4]==x || mt[8][5]==x || mt[8][6]==x || mt[8][7]==x || mt[8][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][1]!=x & mt[1][1]!=x & mt[2][1]!=x & mt[3][1]!=x & mt[4][1]!=x & mt[5][1]!=x & mt[6][1]!=x & mt[8][1]!=x &
+                                            mt[7][0]!=x & mt[7][2]!=x & mt[7][3]!=x & mt[7][4]!=x & mt[7][5]!=x & mt[7][6]!=x & mt[7][7]!=x & mt[7][8]!=x &
+                                            mt[6][0]!=x & mt[6][2]!=x & mt[8][0]!=x & mt[8][2]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][1].compareTo("")!=0 & mat[8][1].compareTo("")!=0) {
+                                            mt[7][1] = x;
+                                            mat[7][1] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[7][0].compareTo("")!=0 & mat[7][2].compareTo("")!=0) {
+                                            mt[7][1] = x;
+                                            mat[7][1] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==7 & f==2) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][0]==x || mt[1][0]==x || mt[2][0]==x || mt[3][0]==x || mt[4][0]==x || mt[5][0]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][1]==x || mt[1][1]==x || mt[2][1]==x || mt[3][1]==x || mt[4][1]==x || mt[5][1]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][3]==x || mt[6][4]==x || mt[6][5]==x || mt[6][6]==x || mt[6][7]==x || mt[6][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][3]==x || mt[8][4]==x || mt[8][5]==x || mt[8][6]==x || mt[8][7]==x || mt[8][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][2]!=x & mt[1][2]!=x & mt[2][2]!=x & mt[3][2]!=x & mt[4][2]!=x & mt[5][2]!=x & mt[6][2]!=x & mt[8][2]!=x &
+                                            mt[7][0]!=x & mt[7][1]!=x & mt[7][3]!=x & mt[7][4]!=x & mt[7][5]!=x & mt[7][6]!=x & mt[7][7]!=x & mt[7][8]!=x &
+                                            mt[6][0]!=x & mt[6][1]!=x & mt[8][0]!=x & mt[8][1]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][2].compareTo("")!=0 & mat[8][2].compareTo("")!=0) {
+                                            mt[7][2] = x;
+                                            mat[7][2] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[7][0].compareTo("")!=0 & mat[7][1].compareTo("")!=0) {
+                                            mt[7][2] = x;
+                                            mat[7][2] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==7 & f==3) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][4]==x || mt[1][4]==x || mt[2][4]==x || mt[3][4]==x || mt[4][4]==x || mt[5][4]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][5]==x || mt[1][5]==x || mt[2][5]==x || mt[3][5]==x || mt[4][5]==x || mt[5][5]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][0]==x || mt[6][1]==x || mt[6][2]==x || mt[6][6]==x || mt[6][7]==x || mt[6][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][0]==x || mt[8][1]==x || mt[8][2]==x || mt[8][6]==x || mt[8][7]==x || mt[8][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][3]!=x & mt[1][3]!=x & mt[2][3]!=x & mt[3][3]!=x & mt[4][3]!=x & mt[5][3]!=x & mt[6][3]!=x & mt[8][3]!=x &
+                                            mt[7][0]!=x & mt[7][1]!=x & mt[7][2]!=x & mt[7][4]!=x & mt[7][5]!=x & mt[7][6]!=x & mt[7][7]!=x & mt[7][8]!=x &
+                                            mt[6][4]!=x & mt[6][5]!=x & mt[8][4]!=x & mt[8][5]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][3].compareTo("")!=0 & mat[8][3].compareTo("")!=0) {
+                                            mt[7][3] = x;
+                                            mat[7][3] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[7][4].compareTo("")!=0 & mat[7][5].compareTo("")!=0) {
+                                            mt[7][3] = x;
+                                            mat[7][3] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==7 & f==4) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][3]==x || mt[1][3]==x || mt[2][3]==x || mt[3][3]==x || mt[4][3]==x || mt[5][3]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][5]==x || mt[1][5]==x || mt[2][5]==x || mt[3][5]==x || mt[4][5]==x || mt[5][5]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][0]==x || mt[6][1]==x || mt[6][2]==x || mt[6][6]==x || mt[6][7]==x || mt[6][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][0]==x || mt[8][1]==x || mt[8][2]==x || mt[8][6]==x || mt[8][7]==x || mt[8][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][4]!=x & mt[1][4]!=x & mt[2][4]!=x & mt[3][4]!=x & mt[4][4]!=x & mt[5][4]!=x & mt[6][4]!=x & mt[8][4]!=x &
+                                            mt[7][0]!=x & mt[7][1]!=x & mt[7][2]!=x & mt[7][3]!=x & mt[7][5]!=x & mt[7][6]!=x & mt[7][7]!=x & mt[7][8]!=x &
+                                            mt[6][3]!=x & mt[6][5]!=x & mt[8][3]!=x & mt[8][5]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][4].compareTo("")!=0 & mat[8][4].compareTo("")!=0) {
+                                            mt[7][4] = x;
+                                            mat[7][4] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[7][3].compareTo("")!=0 & mat[7][5].compareTo("")!=0) {
+                                            mt[7][4] = x;
+                                            mat[7][4] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==7 & f==5) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][3]==x || mt[1][3]==x || mt[2][3]==x || mt[3][3]==x || mt[4][3]==x || mt[5][3]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][4]==x || mt[1][4]==x || mt[2][4]==x || mt[3][4]==x || mt[4][4]==x || mt[5][4]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][0]==x || mt[6][1]==x || mt[6][2]==x || mt[6][6]==x || mt[6][7]==x || mt[6][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][0]==x || mt[8][1]==x || mt[8][2]==x || mt[8][6]==x || mt[8][7]==x || mt[8][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][5]!=x & mt[1][5]!=x & mt[2][5]!=x & mt[3][5]!=x & mt[4][5]!=x & mt[5][5]!=x & mt[6][5]!=x & mt[8][5]!=x &
+                                            mt[7][0]!=x & mt[7][1]!=x & mt[7][2]!=x & mt[7][3]!=x & mt[7][4]!=x & mt[7][6]!=x & mt[7][7]!=x & mt[7][8]!=x &
+                                            mt[6][3]!=x & mt[6][4]!=x & mt[8][3]!=x & mt[8][4]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][5].compareTo("")!=0 & mat[8][5].compareTo("")!=0) {
+                                            mt[7][5] = x;
+                                            mat[7][5] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[7][3].compareTo("")!=0 & mat[7][4].compareTo("")!=0) {
+                                            mt[7][5] = x;
+                                            mat[7][5] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==7 & f==6) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][7]==x || mt[1][7]==x || mt[2][7]==x || mt[3][7]==x || mt[4][7]==x || mt[5][7]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][8]==x || mt[1][8]==x || mt[2][8]==x || mt[3][8]==x || mt[4][8]==x || mt[5][8]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][0]==x || mt[6][1]==x || mt[6][2]==x || mt[6][3]==x || mt[6][4]==x || mt[6][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][0]==x || mt[8][1]==x || mt[8][2]==x || mt[8][3]==x || mt[8][4]==x || mt[8][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][6]!=x & mt[1][6]!=x & mt[2][6]!=x & mt[3][6]!=x & mt[4][6]!=x & mt[5][6]!=x & mt[6][6]!=x & mt[8][6]!=x &
+                                            mt[7][0]!=x & mt[7][1]!=x & mt[7][2]!=x & mt[7][3]!=x & mt[7][4]!=x & mt[7][5]!=x & mt[7][7]!=x & mt[7][8]!=x &
+                                            mt[6][7]!=x & mt[6][8]!=x & mt[8][7]!=x & mt[8][8]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][6].compareTo("")!=0 & mat[8][6].compareTo("")!=0) {
+                                            mt[7][6] = x;
+                                            mat[7][6] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[7][7].compareTo("")!=0 & mat[7][8].compareTo("")!=0) {
+                                            mt[7][6] = x;
+                                            mat[7][6] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==7 & f==7) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][6]==x || mt[1][6]==x || mt[2][6]==x || mt[3][6]==x || mt[4][6]==x || mt[5][6]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][8]==x || mt[1][8]==x || mt[2][8]==x || mt[3][8]==x || mt[4][8]==x || mt[5][8]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][0]==x || mt[6][1]==x || mt[6][2]==x || mt[6][3]==x || mt[6][4]==x || mt[6][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][0]==x || mt[8][1]==x || mt[8][2]==x || mt[8][3]==x || mt[8][4]==x || mt[8][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][7]!=x & mt[1][7]!=x & mt[2][7]!=x & mt[3][7]!=x & mt[4][7]!=x & mt[5][7]!=x & mt[6][7]!=x & mt[8][7]!=x &
+                                            mt[7][0]!=x & mt[7][1]!=x & mt[7][2]!=x & mt[7][3]!=x & mt[7][4]!=x & mt[7][5]!=x & mt[7][6]!=x & mt[7][8]!=x &
+                                            mt[6][6]!=x & mt[6][8]!=x & mt[8][6]!=x & mt[8][8]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][7].compareTo("")!=0 & mat[8][7].compareTo("")!=0) {
+                                            mt[7][7] = x;
+                                            mat[7][7] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[7][6].compareTo("")!=0 & mat[7][8].compareTo("")!=0) {
+                                            mt[7][7] = x;
+                                            mat[7][7] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==7 & f==8) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][6]==x || mt[1][6]==x || mt[2][6]==x || mt[3][6]==x || mt[4][6]==x || mt[5][6]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][7]==x || mt[1][7]==x || mt[2][7]==x || mt[3][7]==x || mt[4][7]==x || mt[5][7]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][0]==x || mt[6][1]==x || mt[6][2]==x || mt[6][3]==x || mt[6][4]==x || mt[6][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[8][0]==x || mt[8][1]==x || mt[8][2]==x || mt[8][3]==x || mt[8][4]==x || mt[8][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][8]!=x & mt[1][8]!=x & mt[2][8]!=x & mt[3][8]!=x & mt[4][8]!=x & mt[5][8]!=x & mt[6][8]!=x & mt[8][8]!=x &
+                                            mt[7][0]!=x & mt[7][1]!=x & mt[7][2]!=x & mt[7][3]!=x & mt[7][4]!=x & mt[7][5]!=x & mt[7][6]!=x & mt[7][7]!=x &
+                                            mt[6][6]!=x & mt[6][7]!=x & mt[8][6]!=x & mt[8][7]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][8].compareTo("")!=0 & mat[8][8].compareTo("")!=0) {
+                                            mt[7][8] = x;
+                                            mat[7][8] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[7][6].compareTo("")!=0 & mat[7][7].compareTo("")!=0) {
+                                            mt[7][8] = x;
+                                            mat[7][8] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==8 & f==0) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][1]==x || mt[1][1]==x || mt[2][1]==x || mt[3][1]==x || mt[4][1]==x || mt[5][1]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][2]==x || mt[1][2]==x || mt[2][2]==x || mt[3][2]==x || mt[4][2]==x || mt[5][2]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][3]==x || mt[6][4]==x || mt[6][5]==x || mt[6][6]==x || mt[6][7]==x || mt[6][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[7][3]==x || mt[7][4]==x || mt[7][5]==x || mt[7][6]==x || mt[7][7]==x || mt[7][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][0]!=x & mt[1][0]!=x & mt[2][0]!=x & mt[3][0]!=x & mt[4][0]!=x & mt[5][0]!=x & mt[6][0]!=x & mt[7][0]!=x &
+                                            mt[8][1]!=x & mt[8][2]!=x & mt[8][3]!=x & mt[8][4]!=x & mt[8][5]!=x & mt[8][6]!=x & mt[8][7]!=x & mt[8][8]!=x &
+                                            mt[6][1]!=x & mt[6][2]!=x & mt[7][1]!=x & mt[7][2]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][0].compareTo("")!=0 & mat[7][0].compareTo("")!=0) {
+                                            mt[8][0] = x;
+                                            mat[8][0] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[8][1].compareTo("")!=0 & mat[8][2].compareTo("")!=0) {
+                                            mt[8][0] = x;
+                                            mat[8][0] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==8 & f==1) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][0]==x || mt[1][0]==x || mt[2][0]==x || mt[3][0]==x || mt[4][0]==x || mt[5][0]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][2]==x || mt[1][2]==x || mt[2][2]==x || mt[3][2]==x || mt[4][2]==x || mt[5][2]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][3]==x || mt[6][4]==x || mt[6][5]==x || mt[6][6]==x || mt[6][7]==x || mt[6][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[7][3]==x || mt[7][4]==x || mt[7][5]==x || mt[7][6]==x || mt[7][7]==x || mt[7][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][1]!=x & mt[1][1]!=x & mt[2][1]!=x & mt[3][1]!=x & mt[4][1]!=x & mt[5][1]!=x & mt[6][1]!=x & mt[7][1]!=x &
+                                            mt[8][0]!=x & mt[8][2]!=x & mt[8][3]!=x & mt[8][4]!=x & mt[8][5]!=x & mt[8][6]!=x & mt[8][7]!=x & mt[8][8]!=x &
+                                            mt[6][0]!=x & mt[6][2]!=x & mt[7][0]!=x & mt[7][2]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][1].compareTo("")!=0 & mat[7][1].compareTo("")!=0) {
+                                            mt[8][1] = x;
+                                            mat[8][1] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[8][0].compareTo("")!=0 & mat[8][2].compareTo("")!=0) {
+                                            mt[8][1] = x;
+                                            mat[8][1] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==8 & f==2) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][0]==x || mt[1][0]==x || mt[2][0]==x || mt[3][0]==x || mt[4][0]==x || mt[5][0]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][1]==x || mt[1][1]==x || mt[2][1]==x || mt[3][1]==x || mt[4][1]==x || mt[5][1]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][3]==x || mt[6][4]==x || mt[6][5]==x || mt[6][6]==x || mt[6][7]==x || mt[6][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[7][3]==x || mt[7][4]==x || mt[7][5]==x || mt[7][6]==x || mt[7][7]==x || mt[7][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][2]!=x & mt[1][2]!=x & mt[2][2]!=x & mt[3][2]!=x & mt[4][2]!=x & mt[5][2]!=x & mt[6][2]!=x & mt[7][2]!=x &
+                                            mt[8][0]!=x & mt[8][1]!=x & mt[8][3]!=x & mt[8][4]!=x & mt[8][5]!=x & mt[8][6]!=x & mt[8][7]!=x & mt[8][8]!=x &
+                                            mt[6][0]!=x & mt[6][1]!=x & mt[7][0]!=x & mt[7][1]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][2].compareTo("")!=0 & mat[7][2].compareTo("")!=0) {
+                                            mt[8][2] = x;
+                                            mat[8][2] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[8][0].compareTo("")!=0 & mat[8][1].compareTo("")!=0) {
+                                            mt[8][2] = x;
+                                            mat[8][2] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==8 & f==3) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][4]==x || mt[1][4]==x || mt[2][4]==x || mt[3][4]==x || mt[4][4]==x || mt[5][4]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][5]==x || mt[1][5]==x || mt[2][5]==x || mt[3][5]==x || mt[4][5]==x || mt[5][5]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][0]==x || mt[6][1]==x || mt[6][2]==x || mt[6][6]==x || mt[6][7]==x || mt[6][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[7][0]==x || mt[7][1]==x || mt[7][2]==x || mt[7][6]==x || mt[7][7]==x || mt[7][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][3]!=x & mt[1][3]!=x & mt[2][3]!=x & mt[3][3]!=x & mt[4][3]!=x & mt[5][3]!=x & mt[6][3]!=x & mt[7][3]!=x &
+                                            mt[8][0]!=x & mt[8][1]!=x & mt[8][2]!=x & mt[8][4]!=x & mt[8][5]!=x & mt[8][6]!=x & mt[8][7]!=x & mt[8][8]!=x &
+                                            mt[6][4]!=x & mt[6][5]!=x & mt[7][4]!=x & mt[7][5]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][3].compareTo("")!=0 & mat[7][3].compareTo("")!=0) {
+                                            mt[8][3] = x;
+                                            mat[8][3] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[8][4].compareTo("")!=0 & mat[8][5].compareTo("")!=0) {
+                                            mt[8][3] = x;
+                                            mat[8][3] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==8 & f==4) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][3]==x || mt[1][3]==x || mt[2][3]==x || mt[3][3]==x || mt[4][3]==x || mt[5][3]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][5]==x || mt[1][5]==x || mt[2][5]==x || mt[3][5]==x || mt[4][5]==x || mt[5][5]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][0]==x || mt[6][1]==x || mt[6][2]==x || mt[6][6]==x || mt[6][7]==x || mt[6][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[7][0]==x || mt[7][1]==x || mt[7][2]==x || mt[7][6]==x || mt[7][7]==x || mt[7][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][4]!=x & mt[1][4]!=x & mt[2][4]!=x & mt[3][4]!=x & mt[4][4]!=x & mt[5][4]!=x & mt[6][4]!=x & mt[7][4]!=x &
+                                            mt[8][0]!=x & mt[8][1]!=x & mt[8][2]!=x & mt[8][3]!=x & mt[8][5]!=x & mt[8][6]!=x & mt[8][7]!=x & mt[8][8]!=x &
+                                            mt[6][3]!=x & mt[6][5]!=x & mt[7][3]!=x & mt[7][5]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][4].compareTo("")!=0 & mat[7][4].compareTo("")!=0) {
+                                            mt[8][4] = x;
+                                            mat[8][4] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[8][3].compareTo("")!=0 & mat[8][5].compareTo("")!=0) {
+                                            mt[8][4] = x;
+                                            mat[8][4] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==8 & f==5) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][3]==x || mt[1][3]==x || mt[2][3]==x || mt[3][3]==x || mt[4][3]==x || mt[5][3]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][4]==x || mt[1][4]==x || mt[2][4]==x || mt[3][4]==x || mt[4][4]==x || mt[5][4]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][0]==x || mt[6][1]==x || mt[6][2]==x || mt[6][6]==x || mt[6][7]==x || mt[6][8]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[7][0]==x || mt[7][1]==x || mt[7][2]==x || mt[7][6]==x || mt[7][7]==x || mt[7][8]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][5]!=x & mt[1][5]!=x & mt[2][5]!=x & mt[3][5]!=x & mt[4][5]!=x & mt[5][5]!=x & mt[6][5]!=x & mt[7][5]!=x &
+                                            mt[8][0]!=x & mt[8][1]!=x & mt[8][2]!=x & mt[8][3]!=x & mt[8][4]!=x & mt[8][6]!=x & mt[8][7]!=x & mt[8][8]!=x &
+                                            mt[6][3]!=x & mt[6][4]!=x & mt[7][3]!=x & mt[7][4]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][5].compareTo("")!=0 & mat[7][5].compareTo("")!=0) {
+                                            mt[8][5] = x;
+                                            mat[8][5] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[8][3].compareTo("")!=0 & mat[8][4].compareTo("")!=0) {
+                                            mt[8][5] = x;
+                                            mat[8][5] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==8 & f==6) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][7]==x || mt[1][7]==x || mt[2][7]==x || mt[3][7]==x || mt[4][7]==x || mt[5][7]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][8]==x || mt[1][8]==x || mt[2][8]==x || mt[3][8]==x || mt[4][8]==x || mt[5][8]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][0]==x || mt[6][1]==x || mt[6][2]==x || mt[6][3]==x || mt[6][4]==x || mt[6][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[7][0]==x || mt[7][1]==x || mt[7][2]==x || mt[7][3]==x || mt[7][4]==x || mt[7][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][6]!=x & mt[1][6]!=x & mt[2][6]!=x & mt[3][6]!=x & mt[4][6]!=x & mt[5][6]!=x & mt[6][6]!=x & mt[7][6]!=x &
+                                            mt[8][0]!=x & mt[8][1]!=x & mt[8][2]!=x & mt[8][3]!=x & mt[8][4]!=x & mt[8][5]!=x & mt[8][7]!=x & mt[8][8]!=x &
+                                            mt[6][7]!=x & mt[6][8]!=x & mt[7][7]!=x & mt[7][8]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][6].compareTo("")!=0 & mat[7][6].compareTo("")!=0) {
+                                            mt[8][6] = x;
+                                            mat[8][6] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[8][7].compareTo("")!=0 & mat[8][8].compareTo("")!=0) {
+                                            mt[8][6] = x;
+                                            mat[8][6] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==8 & f==7) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][6]==x || mt[1][6]==x || mt[2][6]==x || mt[3][6]==x || mt[4][6]==x || mt[5][6]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][8]==x || mt[1][8]==x || mt[2][8]==x || mt[3][8]==x || mt[4][8]==x || mt[5][8]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][0]==x || mt[6][1]==x || mt[6][2]==x || mt[6][3]==x || mt[6][4]==x || mt[6][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[7][0]==x || mt[7][1]==x || mt[7][2]==x || mt[7][3]==x || mt[7][4]==x || mt[7][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][7]!=x & mt[1][7]!=x & mt[2][7]!=x & mt[3][7]!=x & mt[4][7]!=x & mt[5][7]!=x & mt[6][7]!=x & mt[7][7]!=x &
+                                            mt[8][0]!=x & mt[8][1]!=x & mt[8][2]!=x & mt[8][3]!=x & mt[8][4]!=x & mt[8][5]!=x & mt[8][6]!=x & mt[8][8]!=x &
+                                            mt[6][6]!=x & mt[6][8]!=x & mt[7][6]!=x & mt[7][8]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][7].compareTo("")!=0 & mat[7][7].compareTo("")!=0) {
+                                            mt[8][7] = x;
+                                            mat[8][7] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[8][6].compareTo("")!=0 & mat[8][8].compareTo("")!=0) {
+                                            mt[8][7] = x;
+                                            mat[8][7] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        if (c==8 & f==8) {
+                            if (mat[c][f].equalsIgnoreCase("")) {
+                                for (int x=1; x<=9; x++) {
+                                    if (mt[0][6]==x || mt[1][6]==x || mt[2][6]==x || mt[3][6]==x || mt[4][6]==x || mt[5][6]==x) {
+                                        row1 = true;
+                                    }
+                                    else {
+                                        row1 = false;
+                                    }
+                                    
+                                    if (mt[0][7]==x || mt[1][7]==x || mt[2][7]==x || mt[3][7]==x || mt[4][7]==x || mt[5][7]==x) {
+                                        row2 = true;
+                                    }
+                                    else {
+                                        row2 = false;
+                                    }
+                                    
+                                    if (mt[6][0]==x || mt[6][1]==x || mt[6][2]==x || mt[6][3]==x || mt[6][4]==x || mt[6][5]==x) {
+                                        row3 = true;
+                                    }
+                                    else {
+                                        row3 = false;
+                                    }
+                                    
+                                    if (mt[7][0]==x || mt[7][1]==x || mt[7][2]==x || mt[7][3]==x || mt[7][4]==x || mt[7][5]==x) {
+                                        row4 = true;
+                                    }
+                                    else {
+                                        row4 = false;
+                                    }
+                                    
+                                    if (mt[0][8]!=x & mt[1][8]!=x & mt[2][8]!=x & mt[3][8]!=x & mt[4][8]!=x & mt[5][8]!=x & mt[6][8]!=x & mt[7][8]!=x &
+                                            mt[8][0]!=x & mt[8][1]!=x & mt[8][2]!=x & mt[8][3]!=x & mt[8][4]!=x & mt[8][5]!=x & mt[8][6]!=x & mt[8][7]!=x &
+                                            mt[6][6]!=x & mt[6][7]!=x & mt[7][6]!=x & mt[7][7]!=x) {
+                                        
+                                        if ((row1 & row2) & mat[6][8].compareTo("")!=0 & mat[7][8].compareTo("")!=0) {
+                                            mt[8][8] = x;
+                                            mat[8][8] = String.valueOf(x);
+                                        }
+                                        if ((row3 & row4) & mat[8][6].compareTo("")!=0 & mat[8][7].compareTo("")!=0) {
+                                            mt[8][8] = x;
+                                            mat[8][8] = String.valueOf(x);
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
-        }
-    }
-    private void actionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actionPerformed
-        if (evt.getSource()==jButton1) {
-            defineMatriz();
-        }
-    }//GEN-LAST:event_actionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Sudoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Sudoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Sudoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Sudoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Sudoku().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JTextField tf00;
     private javax.swing.JTextField tf01;
     private javax.swing.JTextField tf02;
